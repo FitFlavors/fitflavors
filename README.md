@@ -14,68 +14,54 @@
   
 ## Instalación
 1. **Ya que se haya instalado laragon, dar clic a Iniciar todo y abrir terminal**:
-![image](https://github.com/dneb8/FitFlavors/assets/107234871/e97a9738-1c9e-449c-9275-81bb0d34f13e)
+![image](https://github.com/dneb8/fitflavors/assets/107234871/4cab2b47-3b09-456a-9a7d-4fe11df51138)
 
-2. **Clonar el Repositorio en laragon**: 
+
+3. **Clonar el Repositorio en laragon**: 
 
    Clonar con GitHub Desktop, o:
    ```bash
-   git clone https://github.com/dneb8/FitFlavors.git fitflavors
+   git clone https://github.com/dneb8/fitflavors.git fitflavors
    //Clonar en carpeta laragon/www
    ```
-3. **Copiar archivo .env.example a .env:**
+4. **Copiar archivo .env.example a .env:**
    ```bash
    cp .env.example .env
    
    //abrir Visual Studio para editarlo
    code .
    
-   //buscar archivo env y escribir:
-   APP_URL=http://localhost/fitflavors/public
+   //buscar archivo env y configurar la Base de Datos con credenciales de mysql.
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=fitflavors
+    DB_USERNAME=root
+    DB_PASSWORD=   
    ```
 
-4. **Generar clave de aplicación**:
+5. **Generar clave de aplicación**:
    ```bash
    php artisan key:generate
    ```  
-5. **Instalar Dependencias de Composer**: 
+6. **Instalar Dependencias de Composer**: 
    ```bash
    composer install
    ```
-6. **Instalar Dependencias de Node**: 
+7. **Instalar Dependencias de Node**: 
    ```bash
    npm install
    ```
-7. **Ejecutar las Migraciones y Seeders**:
+8. **Ejecutar las Migraciones**:
    ```bash
-   php artisan migrate --seed
+   php artisan migrate 
    ```
-   Configurar la Base de Datos en el archivo .env con credenciales de mysql.
-
-8. **Crear un enlace simbólico para el almacenamiento público**: 
-   ```bash
-   php artisan storage:link
-   ```
-   Si el comando dice que ya existe el link, hacer lo siguiente:
-    ```bash
-    D:\laragon\www\FitFlavors(main -> origin)
-    λ php artisan storage:link
-       ERROR  The [D:\laragon\www\FitFlavors\public\storage] link already exists.
-    D:\laragon\www\FitFlavors(main -> origin)
-    λ cd public
-    D:\laragon\www\FitFlavors\public(main -> origin)
-    λ rm storage -r
-    D:\laragon\www\FitFlavors\public(main -> origin)
-    λ cd ..
-    D:\laragon\www\FitFlavors(main -> origin)
-    λ php artisan storage:link
-    
-       INFO  The [D:\laragon\www\FitFlavors\public\storage] link has been connected to [D:\laragon\www\FitFlavors\storage\app/public].
-    ```
-9. **Iniciar el servidor**:
+10. **Iniciar el servidor**:
    ```bash
    php artisan serve
    ```
-10. **Entrar a la ruta: http://localhost/fitflavors/public/**
+
+
 
 
