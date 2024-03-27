@@ -4,7 +4,7 @@
 
 @section('content')
 
-    {{--Poner código de index.html--}}
+    {{--Poner código de contact.html--}}
 
        
         <br /> <br /> <br />
