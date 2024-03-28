@@ -58,10 +58,11 @@
    php artisan migrate 
    ```
 10. **Iniciar el servidor**:
-   ```bash
-   php artisan serve
-   ```
+       ```bash
+       php artisan serve
+       ```
 
+## **[Issues](ISSUES.md)**
 
 
 
