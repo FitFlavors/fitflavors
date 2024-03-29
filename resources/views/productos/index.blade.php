@@ -47,15 +47,25 @@
 								</div>
 								<div class="bottom-area d-flex px-3">
 									<div class="m-auto d-flex">
-										<a href="{{route('productos.edit', $producto->id)}}" class="add-to-cart d-flex justify-content-center align-items-center text-center" style="background-color: #ddc258">
+										{{--Hacer que estos dos solo le aparezcan al administrador--}}
+										<a href="{{route('productos.edit', $producto->id)}}" class="add-to-cart d-flex justify-content-center align-items-center text-center mr-1" style="background-color: #ddc258">
 											<span><i class="ion-ios-create"></i></span>
 										</a>
-										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" style="background-color: #ddc258">
+										<form action="{{route('productos.destroy', $producto)}}" method=POST>
+											@csrf
+											@method('DELETE')
+											<button type="submit" class="add-to-cart d-flex justify-content-center align-items-center text-center" style="background-color: #ddc258">
+												<span><i class="ion-ios-trash"></i></span>
+											</button>
+										</form>
+
+										{{--Hacer que estos dos solo le aparezcan al usuario normal--}}
+										{{--<a href="#" class="buy-now d-flex justify-content-center align-items-center mr-1" style="background-color: #ddc258">
 											<span><i class="ion-ios-cart"></i></span>
 										</a>
 										<a href="#" class="heart d-flex justify-content-center align-items-center" style="background-color: #ddc258">
 											<span><i class="ion-ios-heart"></i></span>
-										</a>
+										</a>--}}
 									</div>
 								</div>
 							</div>

@@ -5,18 +5,22 @@
 @section('content')
 
     <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg'); background-color: #ddc258;">
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio</a></span> <span class="mr-2"><a href="index.html">Productos</a></span> <span>{{$producto->producto}}</span></p>
-            <h1 class="mb-0 bread">{{$producto->producto}}</h1>
-            <div class="d-flex align-items-center justify-content-center">
-                <p><a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">Editar producto</a></p> 
-                <p><a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary ml-3">Eliminar producto</a></p> 
-            </div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/">Inicio</a></span> <span class="mr-2"><a href="/productos">Productos</a></span> <span>{{$producto->producto}}</span></p>
+                    <h1 class="mb-0 bread">{{$producto->producto}}</h1>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <p><a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">Editar producto</a></p> 
+                        <form action="{{route('productos.destroy', $producto)}}" method=POST>
+                            @csrf
+                            @method('DELETE')
+                            <p><button type="submit" class="btn btn-primary ml-3 mt-3">Eliminar producto</button></p> 
+                        </form>
+                    </div>
+                </div>
           </div>
         </div>
-      </div>
     </div>
 
     <section class="ftco-section">
