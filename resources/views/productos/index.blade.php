@@ -35,14 +35,14 @@
 				@foreach($productos as $producto)
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="assets/images/prdct-1.jpg" alt="Colorlib Template">
+							<a href="{{route('productos.show', $producto->id)}}" class="img-prod"><img class="img-fluid" src="assets/images/prdct-1.jpg" alt="Colorlib Template">
 								<div class="overlay"></div>
 							</a>
 							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#">{{$producto->producto}}</a></h3>
+								<h3><a href="{{route('productos.show', $producto->id)}}">{{$producto->producto}}</a></h3>
 								<div class="d-flex">
 									<div class="pricing">
-										<p class="price"><span>${{$producto->precio}}</span></p>
+										<p class="price"><span>${{ number_format($producto->precio, 2) }}</span></p>
 									</div>
 								</div>
 								<div class="bottom-area d-flex px-3">

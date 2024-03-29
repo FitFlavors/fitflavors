@@ -1,6 +1,6 @@
 @extends('layouts.app-layout')
 
-@section('title', 'FitFlavors | Nuevo producto') 
+@section('title', 'FitFlavors | Editar ' . $producto->producto) 
 
 @section('content')
 
