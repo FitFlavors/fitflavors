@@ -12,7 +12,9 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return view('productos.index');
+        $productos = Producto::query()->get();
+        
+        return view('productos.index', compact('productos'));
     }
 
     /**
@@ -20,7 +22,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('productos.create');
     }
 
     /**
@@ -28,7 +30,27 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'producto' => 'required|string',
+            'precio' => 'required|numeric',
+            'proveedor' => 'string|nullable',
+            'descripcion' => 'required|string',
+            'ingredientes' => 'required|string',
+            'disponible' => 'required|integer',
+        ]);
+
+        $producto = Producto::create([
+            'producto' => $request->producto,
+            'precio' => $request->precio,
+            'proveedor' => $request->proveedor,
+            'descripcion' => $request->descripcion,
+            'ingredientes' => $request->ingredientes,
+            'disponible' => $request->disponible,
+        ]);
+
+        $producto->save();
+
+        return redirect()->route('productos.index');
     }
 
     /**
