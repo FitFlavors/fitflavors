@@ -47,7 +47,7 @@
 								</div>
 								<div class="bottom-area d-flex px-3">
 									<div class="m-auto d-flex">
-										<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center" style="background-color: #ddc258">
+										<a href="{{route('productos.edit', $producto->id)}}" class="add-to-cart d-flex justify-content-center align-items-center text-center" style="background-color: #ddc258">
 											<span><i class="ion-ios-create"></i></span>
 										</a>
 										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" style="background-color: #ddc258">

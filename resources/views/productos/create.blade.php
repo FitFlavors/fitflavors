@@ -20,7 +20,7 @@
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
             <form action="{{ route('productos.store') }}" method="POST" class="bg-white p-5 contact-form">
-            @csrf
+                @csrf
               <div class="form-group">
                 <input type="text" name="producto" class="form-control" placeholder="Nombre del producto" required>
               </div>
@@ -29,7 +29,7 @@
                 <input type="number" name="disponible" class="form-control ml-3" placeholder="Cantidad disponible" required>
               </div>
               <div class="form-group">
-                <input type="text" name="proveedor" class="form-control" placeholder="Proveedor">
+                <input type="text" name="proveedor" class="form-control" placeholder="Proveedor" required>
               </div>
               <div class="form-group">
                 <textarea name="descripcion" id="" cols="30" rows="7" class="form-control" placeholder="Descripción del producto" required></textarea>
