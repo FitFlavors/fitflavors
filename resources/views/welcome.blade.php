@@ -4,14 +4,7 @@
 
 @section('content')
 
-    {{--Poner código de index.html--}}
-
-
-
-
-
-
-<!-- CARRUSEL DE IMAGENES CARRUSEL DE IMAGENES -->
+{{-- CARRUSEL DE IMAGENES CARRUSEL DE IMAGENES --}}
     <section id="home-section" class="hero">
 
 		  <div class="home-slider owl-carousel">
@@ -93,7 +86,7 @@
     </section>
 
 
-	<!-- EL MEJOR PRODUCTO PARA TI SECCIÓN -->
+	{{-- EL MEJOR PRODUCTO PARA TI SECCIÓN --}}
 	<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
     	<div class="container">
 				<div class="row justify-content-end">
@@ -115,7 +108,7 @@
 
 
 
-	<!-- CÍRCULOS CÍRCULOS CÍRCULOS  -->
+	{{-- CÍRCULOS CÍRCULOS CÍRCULOS  --}}
     <section class="ftco-section">
 			<div class="container">
 				<div class="row no-gutters ftco-services">
@@ -169,7 +162,7 @@
 
 
 
-		<!--CATEGORÍAS CATEGORÍAS -->
+		{{--CATEGORÍAS CATEGORÍAS --}}
 		<section id="CATEGORIAS" class="ftco-section ftco-category ftco-no-pt">
 			<div class="container">
 				<div class="row">
@@ -182,7 +175,7 @@
 										<p>Cuida la salud de los tuyos seleccionando tus productos favoritos. Ofrecemos distintas 
 											categorías que pueden ayudarte a elegir lo que más necesitas.  </p>
 										<p><a href="#" class="btn btn-primary">Ver más categorías</a></p>
-										<!--DEBE LLEVAR A CATEGORÍAS-->
+										{{--DEBE LLEVAR A CATEGORÍAS--}}
 									</div>
 								</div>
 							</div>
@@ -219,7 +212,7 @@
 		</section>
 
 
-	<!--PRODUCTOS PRODUCTOS PRODUCTOS -->
+	{{--PRODUCTOS PRODUCTOS PRODUCTOS --}}
     <section id="PRODUCTOS" class="ftco-section">
     	<div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
@@ -235,13 +228,13 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="product">
+    				<div class="product" >
     					<a href="#" class="img-prod"><img class="img-fluid" src="assets/images/barritas-nutritivas.png" alt="Colorlib Template">
     						<span class="status">Favorito del mes</span>
     						<div class="overlay"></div>
     					</a>
-    					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="#">Barritas nutritivas de chocolate amargo</a></h3>
+    					<div class="text py-3 pb-4 px-3 text-center title-prod">
+    						<h3><a class="title-prod" href="#">Barritas nutritivas de chocolate amargo</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="mr-2 price-dc">$80.00</span><span class="price-sale">$40.00</span></p>
@@ -297,7 +290,7 @@
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="#">Variedad en mermelada (1 pieza)</a></h3>
+    						<h3><a href="#">Variedad en mermelada</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>$60.00</span></p>
@@ -325,7 +318,7 @@
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="#">Col morada (1 pieza) </a></h3>
+    						<h3><a href="#">Col morada</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>$30.00</span></p>
@@ -356,7 +349,7 @@
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="#">Tortillas de nopal (1 Kilo)</a></h3>
+    						<h3><a href="#">Tortillas de nopal</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="mr-2 price-dc">$90.00</span><span class="price-sale">$50.00</span></p>
@@ -384,7 +377,7 @@
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="#">Caja de jitomates(3 Kilos)</a></h3>
+    						<h3><a href="#">Caja de jitomates</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>$90.00</span></p>
@@ -467,7 +460,7 @@
     </section>
 		
 
-	<!-- EL MEJOR PRODUCTO PARA TI SECCIÓN -->
+	{{-- EL MEJOR PRODUCTO PARA TI SECCIÓN --}}
 		<section class="ftco-section img" style="background-image: url(assets/images/bg-9.png);">
     	<div class="container">
 				<div class="row justify-content-end">

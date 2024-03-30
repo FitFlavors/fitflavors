@@ -8665,7 +8665,20 @@ h1, h2, h3, h4, h5,
   .product .img-prod {
     position: relative;
     display: block;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 250px;  
+  }
+  .product .img-prod img {
+    width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Para que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Hace que la imagen se ajuste y se "zoom" dentro del contenedor */
+}
+    .product .title-prod{
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      display: block;
+    }
     .product .img-prod .overlay {
       position: absolute;
       top: 0;
