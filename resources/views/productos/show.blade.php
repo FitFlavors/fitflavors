@@ -27,7 +27,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/product-1.jpg" class="image-popup"><img src="assets/images/prdct-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+    				<a href="images/product-1.jpg" class="image-popup"><img src="/assets/images/prdct-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3>{{$producto->producto}}</h3>
@@ -52,6 +52,7 @@
     				<p>{{$producto->descripcion}}</p>
                     <div class="row mt-4">
                         <div class="w-100"></div>
+                        {{--@if {{$producto->disponible}} > 0--}}
                         <div class="input-group col-md-6 d-flex mb-3">
                             <span class="input-group-btn mr-2">
                                 <button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
@@ -71,47 +72,31 @@
                         </div>
                     </div>
                     <p><a href="cart.html" class="btn btn-black py-3 px-5">Añadir al carrito</a></p>
+                    <div class="container">
+                        <button id="toggleButton" class="mt-auto  btn-ingredientes"><i class="fas fa-list-ul"></i>Ver ingredientes</button>
+                        <div id="contenido" class="contenido oculto">
+                            <p>{{$producto->ingredientes}}</p>
+                        </div>
+                    </div>
     			</div>
     		</div>
     	</div>
     </section>
-
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/aos.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('/assets/js/scrollax.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/google-map.js') }}"></script>
+    <script src="{{ asset('/assets/js/main.js') }}"></script>
     
 @endsection
-
-<script>
-    $(document).ready(function(){
-
-    var quantitiy=0;
-        $('.quantity-right-plus').click(function(e){
-            
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-            
-            // If is not undefined
-                
-                $('#quantity').val(quantity + 1);
-
-                
-                // Increment
-            
-        });
-
-            $('.quantity-left-minus').click(function(e){
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-            
-            // If is not undefined
-            
-                // Increment
-                if(quantity>0){
-                $('#quantity').val(quantity - 1);
-                }
-        });
-        
-    });
-</script>

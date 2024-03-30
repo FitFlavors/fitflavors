@@ -10024,3 +10024,21 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.contenido {
+  display: none; /* Inicialmente oculto */
+  background-color: #f0f0f0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+.contenido p{
+  margin: 10px;
+}
+.oculto {
+  max-height: 0px;
+}
+
+.btn-ingredientes{
+  width:100%;
+}
+  
