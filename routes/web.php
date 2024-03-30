@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Rutas del inicio de la página
-Route::get('/', function () { return view('welcome');});
+Route::get('/', function () { return view('welcome');})->name('welcome');
 Route::get('/contact', function () { return view('contact');});
 Route::get('/about', function () { return view('about');});
+
+//Rutas de producto
+Route::resource('productos', ProductoController::class);
+
 
 Route::middleware([
     'auth:sanctum',
