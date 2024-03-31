@@ -15,7 +15,7 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-sm-12 ftco-animate text-center">
-	              <h1 class="mb-2 fondo-transparente">Apoyamos proveedores locales</h1>
+	              <h1 class="mb-2">Apoyamos proveedores locales</h1>
 	              <h2 class="subheading mb-4">Cada producto es elaborado y cultivado por vendedores locales</h2>
 	              <p><a href="#PROVEEDORES" class="btn btn-primary">Ver proveedores</a></p>
 
@@ -35,7 +35,7 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-md-12 ftco-animate text-center">
-	              <h1 class="mb-2 fondo-transparente">Productos nutritivos &amp; orgánicos esperan por ti.</h1>
+	              <h1 class="mb-2 ">Productos nutritivos &amp; orgánicos esperan por ti.</h1>
 	              <h2 class="subheading mb-4">Delicioso y económicos.</h2>
 	              <p><a href="#PRODUCTOS" class="btn btn-primary">Ver productos</a></p>
 	            </div>
@@ -52,7 +52,7 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-sm-12 ftco-animate text-center">
-	              <h1 class="mb-2 fondo-transparente">Información nutricional de los productos</h1>
+	              <h1 class="mb-2 ">Información nutricional de los productos</h1>
 	              <h2 class="subheading mb-4">¿Buscas información precisa y verificada? Esta es tu tienda</h2>
 	              <p><a href="#PRODUCTOS" class="btn btn-primary">Ver productos</a></p>
 
@@ -69,7 +69,7 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-sm-12 ftco-animate text-center">
-	              <h1 class="mb-2 fondo-transparente">Diferentes categorías &amp; para todos los gustos</h1>
+	              <h1 class="mb-2 ">Diferentes categorías &amp; para todos los gustos</h1>
 	              <h2 class="subheading mb-4">¿Cereales, postres, productos veganos? Prueba ya  </h2>
 	              <p><a href="#CATEGORÍAS" class="btn btn-primary">Ver categorías</a></p>
 
