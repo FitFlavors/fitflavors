@@ -8225,9 +8225,9 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .6;
-    width: 50%;
-    background: #599344; }
+    opacity: .7;
+    width: 100%;
+    background: #000; }
   .hero-wrap .slider-text {
     color: #fff;
     position: relative; }
@@ -8245,19 +8245,23 @@ h1, h2, h3, h4, h5,
     .hero-wrap .slider-text .bread {
       font-weight: 800;
       color: #fff;
+      font-weight: bold;
       font-size: 30px;
       font-family: "Poppins", Arial, sans-serif;
       letter-spacing: 3px;
       text-transform: uppercase; }
     .hero-wrap .slider-text .btn-primary {
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid #ddc258;
+      background: transparent !important;
+      color: #ddc258;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
       -ms-border-radius: 30px;
       border-radius: 30px; }
       .hero-wrap .slider-text .btn-primary:hover, .hero-wrap .slider-text .btn-primary:focus {
-        background: #fff !important;
-        color: #000000; }
+        background: #ddc258 !important;
+        border-color: #ddc258;
+        color: #fff; }
   .hero-wrap.hero-bread {
     padding: 10em 0; }
 
@@ -8776,30 +8780,19 @@ h1, h2, h3, h4, h5,
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .product .text .bottom-area a {
+      .product .text .bottom-area a, button {
         color: #fff;
         width: 100%;
-        background: #599344;
+        background: #ddc258;
         width: 40px;
         height: 40px;
         margin: 0 auto;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
-        border-radius: 50%; }
-      .product .text .bottom-area button {
-          color: #fff;
-          width: 100%;
-          background: #599344;
-          width: 40px;
-          height: 40px;
-          margin: 0 auto;
-          border: none;
-          cursor: pointer;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
-          border-radius: 50%; }
+        border-radius: 50%;
+        border: none;
+        cursor: pointer; }
       .product .text .bottom-area .m-auto {
         margin: 0 auto; }
   .product:hover {
