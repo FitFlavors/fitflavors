@@ -1,6 +1,6 @@
 @extends('layouts.app-layout')
 
-@section('title', 'FitFlavors | Inicio') 
+@section('title', 'FitFlavors | Sobre nosotros') 
 
 @section('content')
     
