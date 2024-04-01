@@ -5,14 +5,19 @@
 @section('content')
 
     <x-hero title="{{$producto->producto}}" head="Productos">
-		<div class="d-flex align-items-center justify-content-center">
-            <p><a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">Editar producto</a></p> 
-            <form action="{{route('productos.destroy', $producto)}}" method=POST>
-                @csrf
-                @method('DELETE')
-                <p><button type="submit" class="btn btn-primary ml-3 mt-3">Eliminar producto</button></p> 
-            </form>
-        </div>
+        @auth
+			@if(auth()->user()->id == 1)
+                <div class="d-flex align-items-center justify-content-center">
+                    <p><a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">Editar producto</a></p> 
+                    <form action="{{route('productos.destroy', $producto)}}" method=POST>
+                        @csrf
+                        @method('DELETE')
+                        <p><button type="submit" class="btn btn-primary ml-3 mt-3">Eliminar producto</button></p> 
+                    </form>
+                </div>
+			@endif
+		@endauth
+		
 	</x-hero>
 
     <section class="ftco-section">

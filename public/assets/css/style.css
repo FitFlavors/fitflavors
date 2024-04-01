@@ -8793,7 +8793,7 @@ h1, h2, h3, h4, h5,
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .product .text .bottom-area a, button {
+      .product .text .bottom-area a {
         color: #fff;
         width: 100%;
         background: #ddc258;
@@ -8806,6 +8806,19 @@ h1, h2, h3, h4, h5,
         border-radius: 50%;
         border: none;
         cursor: pointer; }
+      .product .text .bottom-area .btn-trash {
+          color: #fff;
+          width: 100%;
+          background: #ddc258;
+          width: 40px;
+          height: 40px;
+          margin: 0 auto;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer; }
       .product .text .bottom-area .m-auto {
         margin: 0 auto; }
   .product:hover {

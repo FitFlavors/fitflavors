@@ -26,7 +26,7 @@
                 <div class="d-flex navbar-nav mt-3">
                     @if (Route::has('login'))
                         @auth
-                            <li class="nav-item"> <a href="{{ url('/dashboard') }}" class="nav-link btn btn-primary py-1 px-3">Dashboard</a></li>
+                            <li class="nav-item"> <a href="{{ url('/dashboard') }}" class="nav-link btn btn-primary mb-2 py-1 px-3 mx-1">Mi cuenta</a></li>
                         @else
                             <li class="nav-item"> <a href="{{ route('login') }}" class="nav-link btn btn-primary btn-login mx-1 mb-2 py-1 px-3" style="background-color: transparent;">Ingresar</a></li>
                             @if (Route::has('register'))
