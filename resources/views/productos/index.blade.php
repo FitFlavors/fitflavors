@@ -4,9 +4,11 @@
 
 @section('content')
 	<x-hero title="Productos" head="Productos">
-		{{--HACER QUE ESTE BOTON SEA VISIBLE SOLO PARA ADMINISTRADORES--}}
-        {{--REDIRIGIR A CREATE CONTROLLER--}}
-	    <p><a href="{{ route('productos.create') }}" class="btn btn-primary">Agregar producto</a></p> 
+		@auth
+			@if(auth()->user()->id == 1)
+				<p><a href="{{ route('productos.create') }}" class="btn btn-primary">Agregar producto</a></p>
+			@endif
+		@endauth
 	</x-hero>
 
     <section class="ftco-section">
@@ -39,24 +41,27 @@
 								<div class="bottom-area d-flex px-3">
 									<div class="m-auto d-flex">
 										{{--Hacer que estos dos solo le aparezcan al administrador--}}
-										<a href="{{route('productos.edit', $producto->id)}}" class="add-to-cart d-flex justify-content-center align-items-center text-center mr-1">
-											<span><i class="ion-ios-create"></i></span>
-										</a>
-										<form action="{{route('productos.destroy', $producto)}}" method=POST>
-											@csrf
-											@method('DELETE')
-											<button type="submit" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-												<span><i class="ion-ios-trash"></i></span>
-											</button>
-										</form>
-
-										{{--Hacer que estos dos solo le aparezcan al usuario normal--}}
-										{{--<a href="#" class="buy-now d-flex justify-content-center align-items-center mr-1" style="background-color: #ddc258">
-											<span><i class="ion-ios-cart"></i></span>
-										</a>
-										<a href="#" class="heart d-flex justify-content-center align-items-center" style="background-color: #ddc258">
-											<span><i class="ion-ios-heart"></i></span>
-										</a>--}}
+										@auth
+											@if(auth()->user()->id == 1)
+												<a href="{{route('productos.edit', $producto->id)}}" class="add-to-cart d-flex justify-content-center align-items-center text-center mr-1">
+													<span><i class="ion-ios-create"></i></span>
+												</a>
+												<form action="{{route('productos.destroy', $producto)}}" method=POST>
+													@csrf
+													@method('DELETE')
+													<button type="submit" class="add-to-cart d-flex justify-content-center align-items-center text-center btn-trash">
+														<span><i class="ion-ios-trash"></i></span>
+													</button>
+												</form>
+											@else
+												<a href="#" class="buy-now d-flex justify-content-center align-items-center mr-1" style="background-color: #ddc258">
+													<span><i class="ion-ios-cart"></i></span>
+												</a>
+												<a href="#" class="heart d-flex justify-content-center align-items-center" style="background-color: #ddc258">
+													<span><i class="ion-ios-heart"></i></span>
+												</a>
+											@endif
+										@endauth
 									</div>
 								</div>
 							</div>
