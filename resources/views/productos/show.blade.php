@@ -72,31 +72,17 @@
                         </div>
                     </div>
                     <p><a href="cart.html" class="btn btn-black py-3 px-5">Añadir al carrito</a></p>
-                    <div class="container">
-                        <button id="toggleButton" class="mt-auto  btn-ingredientes"><i class="fas fa-list-ul"></i>Ver ingredientes</button>
-                        <div id="contenido" class="contenido oculto">
-                            <p>{{$producto->ingredientes}}</p>
+                    <div class="ingredientes">
+                        <button id="toggleButton" class="mt-auto btn-ingredientes mostrar">Ver ingredientes</button>
+                        <div id="contenido" class="contenido contenido-border oculto rounded-bottom">
+                                @foreach(explode("\n", $producto->ingredientes) as $ingrediente)
+                                   <p> <i class="fas fa-utensils mr-2"></i>{{ $ingrediente }}</p>
+                                @endforeach
                         </div>
                     </div>
     			</div>
     		</div>
     	</div>
     </section>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="{{ asset('/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/popper.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery.easing.1.3.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery.stellar.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/aos.js') }}"></script>
-    <script src="{{ asset('/assets/js/jquery.animateNumber.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/bootstrap-datepicker.js') }}"></script>
-    <script src="{{ asset('/assets/js/scrollax.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/google-map.js') }}"></script>
-    <script src="{{ asset('/assets/js/main.js') }}"></script>
     
 @endsection

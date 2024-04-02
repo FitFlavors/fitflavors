@@ -96,12 +96,18 @@
                 if (contenido.style.maxHeight) {
                     // Si el contenido está visible, ocultarlo
                     contenido.style.maxHeight = null;
+                    contenido.classList.remove("contenido-border");
                     toggleButton.textContent = "Ver ingredientes";
+                    toggleButton.classList.remove("mostrar"); // Quita una clase de estilo
+                    toggleButton.classList.add("btn-ingredientes")
                 } else {
                     // Si el contenido está oculto, mostrarlo
                     contenido.style.display = "block";
                     contenido.style.maxHeight = contenido.scrollHeight + "px"; // Establecer la altura máxima como la altura real del contenido
+                    contenido.classList.add("contenido-border");
                     toggleButton.textContent = "Ocultar ingredientes";
+                    toggleButton.classList.add("mostrar"); 
+                    toggleButton.classList.remove("btn-ingredientes")
                 }
             });
             
