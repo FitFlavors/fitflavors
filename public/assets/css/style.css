@@ -10051,4 +10051,42 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-    
+.contenido {
+  display: none; /* Inicialmente oculto */
+  background-color: white;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  border:none !important;
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+}
+.contenido-border{
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.contenido p{
+  margin: 10px;
+}
+.oculto {
+  max-height: 0px;
+}
+.mostrar{
+  width:100%;
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+  background-color: #f6f6f6;
+}
+
+.btn-ingredientes{
+  width:100%;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.ingredientes{
+  margin-top: auto;
+}

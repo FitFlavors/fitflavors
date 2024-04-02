@@ -49,6 +49,7 @@
     				<p>{{$producto->descripcion}}</p>
                     <div class="row mt-4">
                         <div class="w-100"></div>
+                        {{--@if {{$producto->disponible}} > 0--}}
                         <div class="input-group col-md-6 d-flex mb-3">
                             <span class="input-group-btn mr-2">
                                 <button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
@@ -68,47 +69,17 @@
                         </div>
                     </div>
                     <p><a href="cart.html" class="btn btn-black py-3 px-5">Añadir al carrito</a></p>
+                    <div class="ingredientes">
+                        <button id="toggleButton" class="mt-auto btn-ingredientes mostrar">Ver ingredientes</button>
+                        <div id="contenido" class="contenido contenido-border oculto rounded-bottom">
+                                @foreach(explode("\n", $producto->ingredientes) as $ingrediente)
+                                   <p> <i class="fas fa-utensils mr-2"></i>{{ $ingrediente }}</p>
+                                @endforeach
+                        </div>
+                    </div>
     			</div>
     		</div>
     	</div>
     </section>
-
     
 @endsection
-
-<script>
-    $(document).ready(function(){
-
-    var quantitiy=0;
-        $('.quantity-right-plus').click(function(e){
-            
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-            
-            // If is not undefined
-                
-                $('#quantity').val(quantity + 1);
-
-                
-                // Increment
-            
-        });
-
-            $('.quantity-left-minus').click(function(e){
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-            
-            // If is not undefined
-            
-                // Increment
-                if(quantity>0){
-                $('#quantity').val(quantity - 1);
-                }
-        });
-        
-    });
-</script>
