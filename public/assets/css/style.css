@@ -3529,6 +3529,13 @@ input[type="button"].btn-block {
   background: no-repeat center center;
   background-size: 100% 100%; }
 
+.navbar img{
+  height: auto;
+  max-height: 25px;
+  width: auto;
+  max-width: 100px;
+}
+
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
@@ -8047,7 +8054,7 @@ h1, h2, h3, h4, h5,
   padding: 0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: transparent !important;
       position: relative;
       top: 0;
       padding: 10px 15px; } }
@@ -8083,7 +8090,7 @@ h1, h2, h3, h4, h5,
         padding-right: 0;
         padding-top: .9rem;
         padding-bottom: .9rem;
-        color: rgba(255, 255, 255, 0.7); }
+        color: #000000; }
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
           color: #fff; } }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
@@ -8129,7 +8136,7 @@ h1, h2, h3, h4, h5,
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
         color: #fff;
-        background: #599344; } }
+        background: #ddc258; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
     color: #000000; }
     @media (max-width: 991.98px) {
@@ -8137,7 +8144,7 @@ h1, h2, h3, h4, h5,
         color: #fff; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #ddc258 !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8218,9 +8225,9 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .6;
-    width: 50%;
-    background: #599344; }
+    opacity: .7;
+    width: 100%;
+    background: #000; }
   .hero-wrap .slider-text {
     color: #fff;
     position: relative; }
@@ -8238,19 +8245,23 @@ h1, h2, h3, h4, h5,
     .hero-wrap .slider-text .bread {
       font-weight: 800;
       color: #fff;
+      font-weight: bold;
       font-size: 30px;
       font-family: "Poppins", Arial, sans-serif;
       letter-spacing: 3px;
       text-transform: uppercase; }
     .hero-wrap .slider-text .btn-primary {
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid #ddc258;
+      background: transparent !important;
+      color: #ddc258;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
       -ms-border-radius: 30px;
       border-radius: 30px; }
       .hero-wrap .slider-text .btn-primary:hover, .hero-wrap .slider-text .btn-primary:focus {
-        background: #fff !important;
-        color: #000000; }
+        background: #ddc258 !important;
+        border-color: #ddc258;
+        color: #fff; }
   .hero-wrap.hero-bread {
     padding: 10em 0; }
 
@@ -8375,8 +8386,8 @@ h1, h2, h3, h4, h5,
         bottom: 0;
         left: 0;
         right: 0;
-        background: #000000;
-        opacity: .2; }
+        background: #000;
+        opacity: .4; }
       .owl-carousel.home-slider .slider-item .slider-text {
         height: 650px;
         z-index: 0; }
@@ -8665,7 +8676,20 @@ h1, h2, h3, h4, h5,
   .product .img-prod {
     position: relative;
     display: block;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 250px;  
+  }
+  .product .img-prod img {
+    width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Para que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Hace que la imagen se ajuste y se "zoom" dentro del contenedor */
+}
+    .product .title-prod{
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      display: block;
+    }
     .product .img-prod .overlay {
       position: absolute;
       top: 0;
@@ -8772,27 +8796,29 @@ h1, h2, h3, h4, h5,
       .product .text .bottom-area a {
         color: #fff;
         width: 100%;
-        background: #599344;
+        background: #ddc258;
         width: 40px;
         height: 40px;
         margin: 0 auto;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
-        border-radius: 50%; }
-      .product .text .bottom-area button {
+        border-radius: 50%;
+        border: none;
+        cursor: pointer; }
+      .product .text .bottom-area .btn-trash {
           color: #fff;
           width: 100%;
-          background: #599344;
+          background: #ddc258;
           width: 40px;
           height: 40px;
           margin: 0 auto;
-          border: none;
-          cursor: pointer;
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
-          border-radius: 50%; }
+          border-radius: 50%;
+          border: none;
+          cursor: pointer; }
       .product .text .bottom-area .m-auto {
         margin: 0 auto; }
   .product:hover {

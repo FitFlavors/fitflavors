@@ -4,16 +4,7 @@
 
 @section('content')
 
-    <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg'); background-color: #ddc258;">
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="/">Inicio</a></span> <span>Productos</span></p>
-            <h1 class="mb-0 bread">Nuevo Producto</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+    <x-hero title="Nuevo Producto" head="Productos"/>
 
     <section class="ftco-section contact-section bg-light">
       <div class="container">
@@ -42,7 +33,7 @@
               </div>
             </form>
           </div>
-          <div class="col-md-6 d-flex" style="background-color: #ddc258">
+          <div class="col-md-6 d-flex" style="background-image: url('/assets/images/prdct-1.jpg');">
           	<div class="bg-white"></div>
           </div>
         </div>
