@@ -37,7 +37,11 @@ class ProductoController extends Controller
             'descripcion' => 'required|string',
             'ingredientes' => 'required|string',
             'disponible' => 'required|integer',
+            'imagen' => 'required|mimes:jpeg,png,jpg,gif,svg|max:1000',
         ]);
+        
+        $imagenRuta = $request->file('imagen')->store('public/images-productos');
+
 
         $producto = Producto::create([
             'producto' => $request->producto,
@@ -46,6 +50,7 @@ class ProductoController extends Controller
             'descripcion' => $request->descripcion,
             'ingredientes' => $request->ingredientes,
             'disponible' => $request->disponible,
+            'imagen' => $imagenRuta,
         ]);
 
         $producto->save();

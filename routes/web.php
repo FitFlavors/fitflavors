@@ -20,6 +20,7 @@ Route::get('/', function () { return view('welcome');})->name('welcome');
 Route::get('/contact', function () { return view('contact');});
 Route::get('/about', function () { return view('about');});
 
+
 //Rutas de producto
 Route::resource('productos', ProductoController::class);
 

@@ -28,6 +28,17 @@
               <div class="form-group">
                 <textarea name="ingredientes" id="" cols="30" rows="7" class="form-control" placeholder="Ingredientes del producto" required></textarea>
               </div>
+
+              <div class="form-group">
+                <label for="imagen">Imagen del producto</label>
+                <input type="file" name="imagen" class="form-control-file" accept="image/*" onchange="previewImage(event)" required>
+                <small id="imagenHelp" class="form-text text-muted">Seleccione una imagen para su producto.</small>
+              </div>
+
+              <div class="form-group">
+               <img id="imagePreview" src="#" alt="SUBA UNA IMAGEN" style="max-width: 200px; max-height: 200px;">
+              </div> 
+
               <div class="form-group">
                 <input type="submit" value="Agregar producto" class="btn btn-primary py-3 px-5">
               </div>
@@ -39,4 +50,18 @@
         </div>
       </div>
     </section>
+
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var preview = document.getElementById('imagePreview');
+                preview.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+
 @endsection
