@@ -10090,3 +10090,15 @@ textarea.form-control {
 .ingredientes{
   margin-top: auto;
 }
+
+.btn-navbar{
+  background: #599344;
+  border: 1px solid #599344;
+  color: #fff;
+  max-height: 30px;
+  justify-content: space-around;
+}
+
+
+
+

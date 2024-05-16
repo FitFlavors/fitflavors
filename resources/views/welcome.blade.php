@@ -37,7 +37,7 @@
 	            <div class="col-md-12 ftco-animate text-center">
 	              <h1 class="mb-2 ">Productos nutritivos &amp; orgánicos esperan por ti.</h1>
 	              <h2 class="subheading mb-4">Delicioso y económicos.</h2>
-	              <p><a href="#PRODUCTOS" class="btn btn-primary">Ver productos</a></p>
+	              <p><a href="{{ route('productos.index') }}" class="btn btn-primary">Ver productos</a></p>
 	            </div>
 
 	          </div>
@@ -54,7 +54,7 @@
 	            <div class="col-sm-12 ftco-animate text-center">
 	              <h1 class="mb-2 ">Información nutricional de los productos</h1>
 	              <h2 class="subheading mb-4">¿Buscas información precisa y verificada? Esta es tu tienda</h2>
-	              <p><a href="#PRODUCTOS" class="btn btn-primary">Ver productos</a></p>
+	              <p><a href="{{ route('productos.index') }}" class="btn btn-primary">Ver productos</a></p>
 
 	            </div>
 		
@@ -71,7 +71,7 @@
 	            <div class="col-sm-12 ftco-animate text-center">
 	              <h1 class="mb-2 ">Diferentes categorías &amp; para todos los gustos</h1>
 	              <h2 class="subheading mb-4">¿Cereales, postres, productos veganos? Prueba ya  </h2>
-	              <p><a href="#CATEGORÍAS" class="btn btn-primary">Ver categorías</a></p>
+	              <p><a href="{{ route('productos.index') }}" class="btn btn-primary">Ver categorías</a></p>
 
 	            </div>
 		
@@ -174,7 +174,7 @@
 										<h2>Variadas categorías</h2>
 										<p>Cuida la salud de los tuyos seleccionando tus productos favoritos. Ofrecemos distintas 
 											categorías que pueden ayudarte a elegir lo que más necesitas.  </p>
-										<p><a href="#" class="btn btn-primary">Ver más categorías</a></p>
+										<p><a href="{{ route('productos.index') }}" class="btn btn-primary">Ver más categorías</a></p>
 										{{--DEBE LLEVAR A CATEGORÍAS--}}
 									</div>
 								</div>
@@ -182,12 +182,12 @@
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/vegano-producto.png);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Productos veganos y vegetarianos</a></h2>
+										<h2 class="mb-0"><a href="{{ route('productos.index') }}">Productos veganos y vegetarianos</a></h2>
 									</div>
 								</div>
 								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/frutas-vegetales.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Frutas y vegetales</a></h2>
+										<h2 class="mb-0"><a href="{{ route('productos.index') }}">Frutas y vegetales</a></h2>
 									</div>
 								</div>
 							</div>
@@ -197,12 +197,12 @@
 					<div class="col-md-4">
 						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/bebidas-nutritivas.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Bebidas</a></h2>
+								<h2 class="mb-0"><a href="{{ route('productos.index') }}">Bebidas</a></h2>
 							</div>		
 						</div>
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/postres-fruta.png);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Postres</a></h2>
+								<h2 class="mb-0"><a href="{{ route('productos.index') }}">Postres</a></h2>
 							</div>
 						</div>
 						
@@ -459,35 +459,29 @@
     	</div>
     </section>
 		
-
 	{{-- EL MEJOR PRODUCTO PARA TI SECCIÓN --}}
-		<section class="ftco-section img" style="background-image: url(assets/images/bg-9.png);">
-    	<div class="container">
-				<div class="row justify-content-end">
+	<section class="ftco-section img" style="background-image: url(assets/images/bg-9.png);">
+		<div class="container">
+			<div class="row justify-content-end">
 				<div class="col-md-6 order-md-last align-items-stretch d-flex" style="background-image: url(assets/images/category-4.jpg);">
-									<div class="text px-3 py-1">
-									</div>
-								</div>
-          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+				</div>
+				<div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+					<span class="subheading">Los mejores precios para ti</span>
+					<h2 class="mb-4">Promociones cada día ¡Rápido que se van!</h2>
+					<p>Descubre nuestras próximas promociones en cereales y semillas en stock ¡Queremos que te lleves todo!</p>
+					<h3><a href="#">Bolsas de cereal seleccionado (100 g)</a></h3>
+					<span class="price">$150 <a href="#">ahora solo $60 (MX)</a></span>
+					<div id="timer" class="d-flex mt-5">
+						<div class="time" id="days"></div>
+						<div class="time pl-3" id="hours"></div>
+						<div class="time pl-3" id="minutes"></div>
+						<div class="time pl-3" id="seconds"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-          	<span class="subheading">Los mejores precios para ti</span>
-            <h2 class="mb-4">Promociones cada día ¡Rápido que se van!</h2>
-            <p>Descubre nuestras próximas promociones en cereales y semillas en stock ¡Queremos que te lleves todo!</p>
-            <h3><a href="#">Bolsas de cereal seleccionado (100 g)</a></h3>
-            <span class="price">$150 <a href="#">ahora solo $60 (MX)</a></span>
-            <div id="timer" class="d-flex mt-5">
-						  <div class="time" id="days"></div>
-						  <div class="time pl-3" id="hours"></div>
-						  <div class="time pl-3" id="minutes"></div>
-						  <div class="time pl-3" id="seconds"></div>
-						  
-						</div>
-          </div>
-		  
-        </div>
-		  		
-    	</div>
-    </section>
 
 		
 	<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">

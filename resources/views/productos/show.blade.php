@@ -12,7 +12,7 @@
                     <form action="{{route('productos.destroy', $producto)}}" method=POST>
                         @csrf
                         @method('DELETE')
-                        <p><button type="submit" class="btn btn-primary ml-3 mt-3">Eliminar producto</button></p> 
+                        <p><button type="submit" class="btn btn-primary ml-3">Eliminar producto</button></p> 
                     </form>
                 </div>
 			@endif
